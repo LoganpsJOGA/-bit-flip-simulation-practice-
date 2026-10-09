@@ -1,0 +1,15 @@
+
+import random
+
+def simulate_bit_flips(n, p):
+    errors = 0
+
+    for i in range(n):
+        if random.random() < p:
+            errors += 1
+
+    return errors
+
+result = simulate_bit_flips(10000, 0.1)
+
+print("Total errors:", result)
